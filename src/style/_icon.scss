@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'iconfont';
+    /* project id 104803 */
+    src: url('//at.alicdn.com/t/font_7pjay2ujbhb0529.eot');
+    src: url('//at.alicdn.com/t/font_7pjay2ujbhb0529.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_7pjay2ujbhb0529.woff') format('woff'), url('//at.alicdn.com/t/font_7pjay2ujbhb0529.ttf') format('truetype'), url('//at.alicdn.com/t/font_7pjay2ujbhb0529.svg#iconfont') format('svg');
+}
+
+.icon {
+    font-family: 'iconfont';
+    font-style: normal;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-voice::before {
+    content: '\e64f';
+}
+
+.icon-search::before {
+    content: '\e620';
+}
+
+.icon-music::before {
+    content: '\e649';
+}
+
+.icon-yun-music::before {
+    content: '\e640';
+}
+
+.icon-account::before {
+    content: '\e76a';
+}
+
+.icon-friend::before {
+    content: '\e7a3';
+}
+
+.icon-note::before {
+    content: '\e6d0';
+}
+
+.icon-headset::before {
+    content: '\e641';
+}
+
+.icon-movie::before {
+    content: '\e737';
+}
+
+.icon-triangle-right::before {
+    content: '\e642';
+}
