@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'iconfont';
     /* project id 104803 */
-    src: url('//at.alicdn.com/t/font_7pjay2ujbhb0529.eot');
-    src: url('//at.alicdn.com/t/font_7pjay2ujbhb0529.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_7pjay2ujbhb0529.woff') format('woff'), url('//at.alicdn.com/t/font_7pjay2ujbhb0529.ttf') format('truetype'), url('//at.alicdn.com/t/font_7pjay2ujbhb0529.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_o33y305ui5asjor.eot');
+    src: url('//at.alicdn.com/t/font_o33y305ui5asjor.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_o33y305ui5asjor.woff') format('woff'), url('//at.alicdn.com/t/font_o33y305ui5asjor.ttf') format('truetype'), url('//at.alicdn.com/t/font_o33y305ui5asjor.svg#iconfont') format('svg');
 }
 
 .icon {
@@ -52,4 +52,32 @@
 
 .icon-triangle-right::before {
     content: '\e642';
+}
+
+.icon-add::before {
+    content: '\e646';
+}
+
+.icon-yun::before {
+    content: '\e644';
+}
+
+.icon-article::before {
+    content: '\e629';
+}
+
+.icon-download::before {
+    content: '\e64e';
+}
+
+.icon-recent-play::before {
+    content: '\e676';
+}
+
+.icon-my-singer::before {
+    content: '\e64a';
+}
+
+.icon-my-radio::before {
+    content: '\e6f4';
 }

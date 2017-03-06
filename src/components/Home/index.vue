@@ -19,9 +19,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scope>
-@import '../../style/util';
-// .app-home{
-// 	padding:rem(166) 0 0 0;
-// }
+<style lang="scss">
 </style>

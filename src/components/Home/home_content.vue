@@ -1,5 +1,5 @@
 <template>
-<div class="app-content">
+<div class="home-content">
     <div class="slider">
         <Slider></Slider>
     </div>
@@ -332,7 +332,7 @@
 <script>
 import Slider from './slider'
 export default {
-  name: 'recommend',
+  name: 'home-content',
   components: {
 	Slider
   }
@@ -341,7 +341,7 @@ export default {
 
 <style lang="scss" >
 @import '../../style/util';
-.app-content {
+.home-content {
     padding: rem(166) 0 rem(97);
     //轮播图
     .slider {

@@ -2,21 +2,9 @@
 <footer class="app-footer">
     <div class="footer-bg"></div>
     <nav class="footer-nav">
-        <router-link to="/" class="item active">
-            <i class="icon icon-yun-music"></i>
-            <p class="title">发现音乐</p>
-        </router-link>
-        <router-link to="/Mymusic" class="item">
-            <i class="icon icon-note"></i>
-            <p class="title">我的音乐</p>
-        </router-link>
-        <router-link to="/Friend" class="item">
-            <i class="icon icon-friend"></i>
-            <p class="title">朋友</p>
-        </router-link>
-        <router-link to="/Account" class="item">
-            <i class="icon icon-account"></i>
-            <p class="title">账号</p>
+        <router-link v-for="(item,index) in footerdata" :to="item.link" class="item" :exact="index==0">
+            <i :class="['icon',item.icon]"></i>
+            <p class="title">{{item.text}}</p>
         </router-link>
     </nav>
 </footer>
@@ -24,7 +12,30 @@
 
 <script>
 export default {
-  name: 'footer'
+  name: 'footer',
+  data(){
+     return{
+         footerdata:[
+            {
+                link:'/',
+                icon:'icon-yun-music',
+                text:'发现音乐'
+            },{
+                link:'/Mymusic',
+                icon:'icon-note',
+                text:'我的音乐'
+            },{
+                link:'/Friend',
+                icon:'icon-account',
+                text:'朋友'
+            },{
+                link:'/Account',
+                icon:'icon-account',
+                text:'账号'
+            }
+        ]
+     }
+  }
 }
 </script>
 

@@ -2,24 +2,33 @@ import Vue from 'vue'
 import Router from 'vue-router'
 //-----------Home page and component----------------
 import Home from 'components/Home/index.vue'
-import Recommedd from 'components/Home/recommend.vue'
-
-import MyMusic from 'components/MyMusic'
+import HomeContent from 'components/Home/home_content.vue'
+//-----------MyMusic page and component----------------
+import MyMusic from 'components/MyMusic/index.vue'
+import MusicList from 'components/MyMusic/music_list.vue'
 
 Vue.use(Router)
 
 export default new Router({
     routes: [{
         path: '/',
-        name: 'Home',
-        component: Home,
+        components: {
+            main: Home,
+            page: MusicList
+        },
         children: [{
             path: '/',
-            component: Recommedd
+            component: HomeContent
         }]
     }, {
         path: '/Mymusic',
-        name: 'MyMusic',
-        component: MyMusic
+        components: {
+            main: MyMusic,
+            page: MusicList
+        },
+        // children: [{
+        //     path: '/',
+        //     component: MusicList
+        // }]
     }]
 })

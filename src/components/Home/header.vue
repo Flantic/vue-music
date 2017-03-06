@@ -80,156 +80,156 @@ export default {
 
 <style lang="scss" >
 @import '../../style/util';
-    .home-header {
-        position: fixed;
-        top: 0;
-        // font-size: rem(26px);
-        // height: rem(86px);
-        width: 100%;
-        overflow: hidden;
-        z-index: 99;
-        border-bottom: rem(1) solid #c6c6c6;
-        .header-search {
-            position: relative;
-            display: flex;
-            padding: rem(13) 0;
-            line-height: rem(60);
-            text-align: center;
-            vertical-align: top;
-            background: $main-tone;
-        }
-    }
-
-    .cancel {
-        position: absolute;
-        right: -14%;
-        width: 14%;
-        color: #fff;
-        text-decoration: underline;
-        cursor: pointer;
-        transition: all .5s;
-    }
-
-    .header-music,
-    .header-voice {
-        position: absolute;
-        top: 0;
-        display: block;
-        line-height: rem(86);
-        height: 100%;
-        width: 15%;
-        cursor: pointer;
-        .icon {
-            font-size: rem(45);
-            color: #fff;
-        }
-        &:active {
-            .icon {
-                color: #222327;
-            }
-        }
-    }
-
-    .header-voice {
-        left: 0;
-    }
-
-    .header-music {
-        right: 0;
-        opacity: 1;
-        transition: all .3s;
-    }
-
-    .search-group {
+.home-header {
+    position: fixed;
+    top: 0;
+    // font-size: rem(26px);
+    // height: rem(86px);
+    width: 100%;
+    overflow: hidden;
+    z-index: 99;
+    border-bottom: rem(1) solid #c6c6c6;
+    .header-search {
         position: relative;
-        margin-left: 15%;
-        width: 70%;
-        transition: all .5s;
-        input {
-            vertical-align: top;
-            height: rem(60);
-            width: 100%;
+        display: flex;
+        padding: rem(13) 0;
+        line-height: rem(60);
+        text-align: center;
+        vertical-align: top;
+        background: $main-tone;
+    }
+}
+
+.cancel {
+    position: absolute;
+    right: -14%;
+    width: 14%;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.header-music,
+.header-voice {
+    position: absolute;
+    top: 0;
+    display: block;
+    line-height: rem(86);
+    height: 100%;
+    width: 15%;
+    cursor: pointer;
+    .icon {
+        font-size: rem(45);
+        color: #fff;
+    }
+    &:active {
+        .icon {
+            color: #222327;
+        }
+    }
+}
+
+.header-voice {
+    left: 0;
+}
+
+.header-music {
+    right: 0;
+    opacity: 1;
+    transition: all .3s;
+}
+
+.search-group {
+    position: relative;
+    margin-left: 15%;
+    width: 70%;
+    transition: all .5s;
+    input {
+        vertical-align: top;
+        height: rem(60);
+        width: 100%;
+        font-size: rem(26);
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+    label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: #ccc;
+        font-size: rem(26);
+        transition: all .3s;
+        .icon {
+            padding: 0 rem(17);
             font-size: rem(26);
-            border-radius: 10px;
-            border: none;
-            outline: none;
+        }
+    }
+}
+
+//搜索状态
+.home-header.is-search {
+    .header-music {
+        opacity: 0;
+    }
+    .header-voice {
+        display: none;
+    }
+    .search-group {
+        margin-left: 2%;
+        width: 85%;
+        input {
+            padding-left: rem(58);
         }
         label {
-            position: absolute;
+            text-align: left;
+        }
+    }
+    .cancel {
+        right: 0;
+    }
+}
+
+//header-nav
+.header-nav {
+    position: relative;
+    height: rem(80);
+    line-height: rem(80);
+    background: #f7f8f8;
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
+    .nav-menu {
+        display: flex;
+        justify-content: space-around;
+        font-size: rem(28);
+    }
+    li {
+        width: 25%;
+        text-align: center;
+        a {
+            display: block;
             width: 100%;
             height: 100%;
-            color: #ccc;
-            font-size: rem(26);
-            transition: all .3s;
-            .icon {
-                padding: 0 rem(17);
-                font-size: rem(26);
-            }
+            color: $main-font-color;
+        }
+        span {
+            display: inline-block;
+            padding: 0 rem(11);
         }
     }
-
-    //搜索状态
-    .home-header.is-search {
-        .header-music {
-            opacity: 0;
-        }
-        .header-voice {
-            display: none;
-        }
-        .search-group {
-            margin-left: 2%;
-            width: 85%;
-            input {
-                padding-left: rem(58);
-            }
-            label {
-                text-align: left;
-            }
-        }
-        .cancel {
-            right: 0;
+    .active {
+        a {
+            color: $main-tone;
         }
     }
-
-    //header-nav
-    .header-nav {
-        position: relative;
-        height: rem(80);
-        line-height: rem(80);
-        background: #f7f8f8;
-        box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
-        .nav-menu {
-            display: flex;
-            justify-content: space-around;
-            font-size: rem(28);
-        }
-        li {
-            width: 25%;
-            text-align: center;
-            a {
-                display: block;
-                width: 100%;
-                height: 100%;
-                color: $main-font-color;
-            }
-            span {
-                display: inline-block;
-                padding: 0 rem(11);
-            }
-        }
-        .active {
-            a {
-                color: $main-tone;
-            }
-        }
-        .nav-slider {
-            position: absolute;
-            bottom: 0;
-            height: rem(4);
-            background: $main-tone;
-            left: 34px;
-            width: 141px;
-            transition: all .3s;
-        }
+    .nav-slider {
+        position: absolute;
+        bottom: 0;
+        height: rem(4);
+        background: $main-tone;
+        left: 34px;
+        width: 141px;
+        transition: all .3s;
     }
+}
 </style>
