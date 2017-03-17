@@ -1,13 +1,8 @@
 <template>
   <div id="app" class="music-app">
     <router-view name="main"></router-view>
-    <transition name="fade">
-       <div class="app-router" v-if="">
-          <router-view name="page"></router-view>
-       </div>
-    </transition>
     <App-Footer></App-Footer>
-  </div> 
+  </div>  
 </template>
 
 <script>
@@ -22,6 +17,11 @@ export default {
 
     }
   }
+  // <transition name="fade">
+  //      <div class="app-router">
+  //         <router-view name="page"></router-view>
+  //      </div>
+  //   </transition>
 }
 </script>
 
@@ -37,16 +37,18 @@ export default {
     font-weight: 500;
     -webkit-font-smoothing:antialiased;
   }
+  .app-router {
+      position:fixed;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      overflow:hidden;
+      z-index:999;
+    }
   .fade-enter-active, .fade-leave-active {
-	  transition: right .3s;
-}
-.fade-enter, .fade-leave-active {
-	.app-router {
-    position:absolute;
-    right:-150%;
-		width:100%;
-    height:100%;
-		opacity: 0;
-	}
-}
+	  transition: opacity .3s;
+  }
+  .fade-enter, .fade-leave-active {
+  }
 </style>

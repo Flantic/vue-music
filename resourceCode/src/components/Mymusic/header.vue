@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import $ from 'jquery'
 export default {
   name: 'header',
   mounted(){
@@ -28,6 +27,12 @@ export default {
 	}
   },
   methods:{
+  },
+  watch:{
+      menu_status:function(flag){
+          console.log(flag)
+          document.getElementsByTagName('body')[0].style.overflow= flag? 'hidden':'';
+      }
   }
 }
 </script>

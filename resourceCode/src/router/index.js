@@ -6,15 +6,15 @@ import HomeContent from 'components/Home/home_content.vue'
 //-----------MyMusic page and component----------------
 import MyMusic from 'components/MyMusic/index.vue'
 import MusicList from 'components/MyMusic/music_list.vue'
-
+//-----------MyMusic page and component----------------
+import Controller from 'components/Controller/index.vue'
 Vue.use(Router)
 
 export default new Router({
     routes: [{
         path: '/',
         components: {
-            main: Home,
-            page: MusicList
+            main: Home
         },
         children: [{
             path: '/',

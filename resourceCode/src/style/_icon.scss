@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'iconfont';
     /* project id 104803 */
-    src: url('//at.alicdn.com/t/font_o33y305ui5asjor.eot');
-    src: url('//at.alicdn.com/t/font_o33y305ui5asjor.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_o33y305ui5asjor.woff') format('woff'), url('//at.alicdn.com/t/font_o33y305ui5asjor.ttf') format('truetype'), url('//at.alicdn.com/t/font_o33y305ui5asjor.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_xh651p968kbg9zfr.eot');
+    src: url('//at.alicdn.com/t/font_xh651p968kbg9zfr.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_xh651p968kbg9zfr.woff') format('woff'), url('//at.alicdn.com/t/font_xh651p968kbg9zfr.ttf') format('truetype'), url('//at.alicdn.com/t/font_xh651p968kbg9zfr.svg#iconfont') format('svg');
 }
 
 .icon {
@@ -80,4 +80,49 @@
 
 .icon-my-radio::before {
     content: '\e6f4';
+}
+
+.icon-love::before {
+    content: '\e655';
+}
+
+.icon-back::before {
+    content: '\e6c2';
+}
+
+.icon-share::before {
+    content: '\e663';
+}
+
+// -----播放器 icon------------------------
+.icon-controller-play::before {
+    content: '\e654';
+}
+
+.icon-controller-suspend::before {
+    content: '\e64d';
+}
+
+.icon-controller-up::before {
+    content: '\e6e1';
+}
+
+.icon-controller-down::before {
+    content: '\e718';
+}
+
+.icon-controller-download::before {
+    content: '\e653';
+}
+
+.icon-controller-menu::before {
+    content: '\e652';
+}
+
+.icon-controller-menu2::before {
+    content: '\e651';
+}
+
+.icon-controller-comment::before {
+    content: '\e67b';
 }
