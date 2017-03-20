@@ -2,7 +2,7 @@
 <footer class="app-footer">
     <div class="footer-bg"></div>
     <nav class="footer-nav">
-        <router-link v-for="(item,index) in footerdata" :to="item.link" class="item" :exact="index==0">
+        <router-link v-for="(item,index) in footerdata" :to="item.link" key="item" class="item" :exact="index==0">
             <i :class="['icon',item.icon]"></i>
             <p class="title">{{item.text}}</p>
         </router-link>
