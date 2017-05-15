@@ -1,29 +1,10 @@
 <template>
   <div id="app" class="music-app">
     <router-view name="main"></router-view>
-    <App-Footer></App-Footer>
+    <router-view name="page"></router-view>
+    <router-view name="control"></router-view>
   </div>  
 </template>
-
-<script>
-import AppFooter from './components/Global/footer'
-export default {
-  name: 'app',
-  components:{
-    AppFooter 
-  },
-  data(){
-    return{
-
-    }
-  }
-  // <transition name="fade">
-  //      <div class="app-router">
-  //         <router-view name="page"></router-view>
-  //      </div>
-  //   </transition>
-}
-</script>
 
 <style lang="scss">
   @import './style/global';

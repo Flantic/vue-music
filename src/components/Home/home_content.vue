@@ -28,8 +28,10 @@
                 <li>
                     <a href="">
                         <div class="item-img">
-                            <img src="../../assets/img/item1.jpg" alt="">
-                            <span class="label"><i class="icon icon-headset"></i>20万</span>
+                            <router-link to="/Controller">
+                                <img src="../../assets/img/item1.jpg" alt="">
+                                <span class="label"><i class="icon icon-headset"></i>20万</span>
+                            </router-link>
                         </div>
                         <div class="item-title">
                             【华语】 愿我们 不负这 美好时光

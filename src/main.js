@@ -5,11 +5,11 @@ import App from './App'
 import $ from 'jquery'
 import router from './router'
 import Rem from './../static/flexible'
+import FastClick from 'fastclick'
 
+FastClick.attach(document.body)
 /* eslint-disable no-new */
 new Vue({
-    el: '#app',
     router,
-    template: '<App/>',
-    components: { App }
-})
+    ...App,
+}).$mount('#app')

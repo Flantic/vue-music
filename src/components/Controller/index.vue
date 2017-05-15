@@ -44,7 +44,9 @@ export default {
     height:100%;
     overflow:hidden;
     .controller-bg{
-        position:absolute;
+        position:fixed;
+        top:-15%;
+        left:-15%;
         width:150%;
         height:150%;
         background-image:url('../../assets/img/main.png');

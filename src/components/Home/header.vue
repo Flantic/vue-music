@@ -29,17 +29,7 @@ import $ from 'jquery'
 export default {
   name: 'header',
   mounted(){
-	  let nav_menu = document.querySelectorAll('.nav-menu>li span');
-	  let style=[];
-	  nav_menu.forEach((val,index)=>{
-		let width = getComputedStyle(val,null).getPropertyValue('width');
-		let left = val.offsetLeft;
-		this.nav_style.push({
-			width:parseInt(width)+'px',
-			left:parseInt(left)+'px'
-		})
-	  })
-		console.log(this.nav_style)
+	  this.initNavPosition()
   },
   components: {
 	// Slider,
@@ -55,21 +45,33 @@ export default {
 	}
   },
   methods:{
-	  nav_switch:function(e){
+      initNavPosition(){
+          let nav_menu = document.querySelectorAll('.nav-menu>li span');
+          let style=[];
+          nav_menu.forEach((val,index)=>{
+            let width = getComputedStyle(val,null).getPropertyValue('width');
+            let left = val.offsetLeft;
+            this.nav_style.push({
+              width:parseInt(width)+'px',
+              left:parseInt(left)+'px'
+            })
+	      })
+      },
+	  nav_switch(e){
 		let parent = $(e.target).parents('li');
 		parent.addClass('active').siblings().removeClass('active');
 		this.active_nav = parent.index();
 
 		console.log(this.nav_style[this.active_nav].left)
 	  },
-	  cleartext:function(){
+	  cleartext(){
 		if(this.search_text == ''){
 			this.label_text = '搜索音乐、歌词、电台';
 			return;
 		}
 		this.label_text = '';
 	  },
-	  header_swith:function(){
+	  header_swith(){
 		  this.search_state=!this.search_state;
 		  this.search_text = "";
 		  this.label_text = '搜索音乐、歌词、电台';

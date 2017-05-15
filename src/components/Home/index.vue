@@ -6,18 +6,12 @@
 </template>
 
 <script>
-// import $ from 'jquery'
 import HomeHeader from './header'
-import Slider from './slider'
 
 export default {
   name: 'home',
   components: {
-		HomeHeader,
-		Slider
+	  HomeHeader
   }
 }
 </script>
-
-<style lang="scss">
-</style>
