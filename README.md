@@ -1,4 +1,4 @@
-# vue-slider-component
+# vue-music
 <p align="center"><a href="http://sioxas.github.io/" target="_blank"><img width="300"src="https://github.com/Sioxas/GitImage/raw/master/Apple_Music_Blur.png"></a></p>
 <p align="center">Vue 音乐搜索、播放 Demo，资源来自QQ音乐</p>
 <p align="center">
@@ -14,9 +14,6 @@
 </p>
 <p align="center">Demo查看地址:<a href="flantic.github.io/vue-music/">http://flantic.github.io/vue-music</a>,在手机上扫一扫,体验效果更好</p>
 <!--<p align="center"><a href="http://flantic.github.io/vue-music"><img src="http://ww2.sinaimg.cn/large/6ee3e8b3gw1f9xjboxz2tj205i05fjrm.jpg" alt="vue-music"></a></p>-->
-
-[![build](https://img.shields.io/wercker/ci/wercker/docs.svg)](https://github.com/Flantic/vue-music)
-[![build](https://img.shields.io/npm/l/express.svg)](https://github.com/Flantic/vue-music)
 
 > 'vue 精仿网易云音乐,目前样式完成百分之50 慢慢填坑中'
 
