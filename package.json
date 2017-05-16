@@ -9,11 +9,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "better-scroll": "^0.1.15",
     "fastclick": "^1.0.6",
     "jquery": "^3.1.1",
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.2",
     "vue": "^2.1.10",
+    "vue-awesome-swiper": "^2.4.2",
     "vue-router": "^2.2.0",
     "vuex": "^2.3.1"
   },

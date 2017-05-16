@@ -1,39 +1,28 @@
 <template>
-<div class="home-slider">
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="../../assets/img/slider1_02.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="../../assets/img/slider2_02.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="../../assets/img/slider3_02.jpg" alt=""></div>
-        </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-        
-        <!-- 如果需要导航按钮 -->
-        <!--  <div class="swiper-button-prev"></div> -->
-        <!-- <div class="swiper-button-next"></div> -->
-        <!-- 如果需要滚动条 -->
-        <!-- <div class="swiper-scrollbar"></div> -->
-    </div>
-</div>
+    <swiper :options="swiperOption"  ref="mySwiper">  
+        <swiper-slide><img src="../../assets/img/slider1_02.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="../../assets/img/slider2_02.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="../../assets/img/slider3_02.jpg" alt=""></swiper-slide> 
+        <div class="swiper-pagination" slot="pagination"></div>  
+    </swiper>  
 </template>
 
 <script>
-import Swiper from '../../../static/swiper-3.4.1.min.js';
-require('../../../static/swiper-3.4.1.min.css')
+ import { swiper, swiperSlide } from 'vue-awesome-swiper'  
+ import { mapState } from 'vuex'
 
  export default {
-   components: {},
-   mounted () {
-     console.log('挂载好了')
-     var mySwiper = new Swiper('.swiper-container', {
-       direction: 'horizontal',
-       autoplay: 3000,
-       loop: false,
-       pagination: '.swiper-pagination'
-     })
-     console.log(mySwiper)
-   }
+    data(){
+        return {
+            swiperOption:{
+                pagination : '.swiper-pagination'
+            }
+        }
+    },
+    components: {
+       swiper,
+       swiperSlide
+    }
  }
 </script>
 

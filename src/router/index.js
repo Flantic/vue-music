@@ -15,6 +15,8 @@ export default new Router({
         MusicRouter,
         FriendRouter,
         AccountRouter,
-        ControlRouter
+        ControlRouter,
+        {path:'/',redirect: '/home'},
+        {path:'*', redirect: '/'}
     ]
 })

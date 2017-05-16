@@ -77,8 +77,8 @@ export default {
         padding: rem(13) 0; 
         // background: $main-tone;
         z-index:2;
-        .icon{ font-weight:100; vertical-align:-10px;}
-        .icon-back{ vertical-align:-15px;}
+        .icon{ font-weight:100; vertical-align:-5px;}
+        .icon-back{ vertical-align:-7px;}
     }
 }
 .header-back,

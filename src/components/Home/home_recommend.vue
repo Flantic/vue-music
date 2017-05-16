@@ -1,5 +1,5 @@
 <template>
-<div class="home-content">
+<div class="home-recommend">
     <div class="slider">
         <Slider></Slider>
     </div>
@@ -334,7 +334,7 @@
 <script>
 import Slider from './slider'
 export default {
-  name: 'home-content',
+  name: 'home-recommend',
   components: {
 	Slider
   }
@@ -343,11 +343,11 @@ export default {
 
 <style lang="scss" >
 @import '../../style/util';
-.home-content {
+.home-recommend {
     padding: rem(166) 0 rem(97);
     //轮播图
     .slider {
-        height: rem(276);
+        // height: rem(276);
         background: #fff;
     }
     .Recommend {
@@ -465,7 +465,7 @@ export default {
         background: rgba(0, 0, 0, 0.5);
         border: rem(4) solid #fff;
         &:before {
-            margin-left: 12px;
+            margin-left: 4px;
         }
     }
     .label {
@@ -514,6 +514,7 @@ export default {
         background: #eee;
         img {
             width: 100%;
+            height:auto;
         }
     }
     .item-title {
@@ -538,6 +539,7 @@ export default {
         overflow: hidden;
         img {
             width: 100%;
+            height:auto;
         }
     }
     .label {

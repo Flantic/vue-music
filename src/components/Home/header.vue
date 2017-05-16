@@ -13,11 +13,11 @@
         <div class="cancel" @click='header_swith'>取消</div>
     </div>
     <nav class="header-nav">
-        <ul class="nav-menu" @click.prevent='nav_switch($event)'>
-            <li class="active"><router-link to="/"><span>个性推荐</span></router-link></li>	
-            <li><a href=""><span>歌单</span></a></li>
-            <li><a href=""><span>主播电台</span></a></li>
-            <li><a href=""><span>排行榜</span></a></li>
+        <ul class="nav-menu">
+            <li @click="NavSwitch($event)"><span>个性推荐</span></li>	
+            <li @click="NavSwitch($event)"><span>歌单</span></li>
+            <li @click="NavSwitch($event)"><span>主播电台</span></li>
+            <li @click="NavSwitch($event)"><span>排行榜</span></li>
         </ul>
         <span class="nav-slider" :style="nav_style[active_nav]"></span>
     </nav>
@@ -25,15 +25,15 @@
 </template>
 
 <script>
+import sliderNav from './slider'
 import $ from 'jquery'
+import store from 'src/store'
 export default {
   name: 'header',
   mounted(){
 	  this.initNavPosition()
   },
   components: {
-	// Slider,
-	// Footer
   },
   data(){
 	return{
@@ -57,12 +57,11 @@ export default {
             })
 	      })
       },
-	  nav_switch(e){
-		let parent = $(e.target).parents('li');
-		parent.addClass('active').siblings().removeClass('active');
-		this.active_nav = parent.index();
-
-		console.log(this.nav_style[this.active_nav].left)
+	  NavSwitch(e){
+		let target = $(e.currentTarget)
+        store.commit('changeHomePage',{num:target.index()})
+		target.addClass('active').siblings().removeClass('active')
+		this.active_nav = target.index();
 	  },
 	  cleartext(){
 		if(this.search_text == ''){
@@ -108,6 +107,7 @@ export default {
     width: 14%;
     color: #fff;
     text-decoration: underline;
+    font-size: rem(28);
     cursor: pointer;
     transition: all .5s;
 }

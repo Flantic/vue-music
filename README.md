@@ -1,5 +1,5 @@
 # vue-music
-<p align="center"><a href="http://sioxas.github.io/" target="_blank"><img width="300"src="https://github.com/Sioxas/GitImage/raw/master/Apple_Music_Blur.png"></a></p>
+<p align="center"><a href="http://flantic.github.io/vue-music/" target="_blank"><img width="300"src="https://github.com/Sioxas/GitImage/raw/master/Apple_Music_Blur.png"></a></p>
 <p align="center">Vue 音乐搜索、播放 Demo，资源来自QQ音乐</p>
 <p align="center">
   <a href="http://sioxas.github.io/"><img src="https://img.shields.io/travis/rust-lang/rust.svg" alt="Vue"></a>

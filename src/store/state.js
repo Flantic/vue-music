@@ -1,6 +1,5 @@
 const state = {
-    MenuStatus: false,
-    MaskStatus:false
+    HomePageNumber:0
 }
 
 export default state

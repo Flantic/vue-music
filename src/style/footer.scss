@@ -7,6 +7,7 @@
     height: rem(97);
     border-top: rem(1) solid #231e22;
     overflow: hidden;
+    z-index: 99;
 }
 
 .footer-bg {
@@ -29,7 +30,7 @@
     justify-content: space-around;
     .item {
         display: block;
-        padding: rem(5) 0 rem(5);
+        padding: rem(1) 0 rem(5);
         width: 25%;
         height: 100%;
         color: #fff;
@@ -38,6 +39,7 @@
             color: #a7a7a7;
         }
         .title {
+            font-size: rem(20);
             color: #7c7a7b;
         }
     }
