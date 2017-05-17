@@ -2,7 +2,7 @@
     <div class="music-control" :class="{'show':this.$store.state.PlayerStatus}">
         <header class="control-header">
             <div class="header-group">
-                <a class="header-back" @click="this.$store.commit('changePlayerStatus')"><i class="icon icon-back"></i></a>
+                <a class="header-back" @click="$store.commit('changePlayerStatus')"><i class="icon icon-back"></i></a>
                 <div class="song-info">
                     <div class="song-name">七里香</div>
                     <div class="author-name">周悦</div>

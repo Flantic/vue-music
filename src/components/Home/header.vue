@@ -9,7 +9,7 @@
                 @focus='search_state=!search_state' 
                 @input='clearText()'>
         </div>
-        <a class="header-music" @click="test"><i class="icon icon-music"></i></a>
+        <a class="header-music" @click="$store.commit('changePlayerStatus')"><i class="icon icon-music"></i></a>
         <div class="cancel" @click='headerSwith'>取消</div>
     </div>
     <nav class="header-nav">
@@ -46,9 +46,6 @@ export default {
 	}
   },
   methods:{
-      test(){
-        this.$store.commit('changePlayerStatus')
-      },
       initNavPosition(){
           let nav_menu = document.querySelectorAll('.nav-menu>li span');
           let style=[];
