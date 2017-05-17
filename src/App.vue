@@ -2,7 +2,9 @@
   <div id="app" class="music-app">
     <router-view name="main"></router-view>
     <router-view name="page"></router-view>
-    <router-view name="control"></router-view>
+    <keep-alive>
+      <router-view name="control"></router-view>
+    </keep-alive>
   </div>  
 </template>
 
@@ -10,13 +12,14 @@
   @import './style/global';
   .music-app {
     position:relative;
-    min-height: 100%;
-    min-width: 100%;
+    height: 100%;
+    width: 100%;
     background: $main-bg-color;
-    font-family: 'Microsoft YaHei';
+    // font-family: 'Microsoft YaHei';
     color: $main-font-color;
     font-weight: 500;
     -webkit-font-smoothing:antialiased;
+    .app-main,.app-home{ height: inherit;}
   }
   .app-router {
       position:fixed;

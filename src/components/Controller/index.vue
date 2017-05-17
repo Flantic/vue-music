@@ -1,8 +1,8 @@
 <template>
-    <div class="music-control">
+    <div class="music-control" :class="{'show':this.$store.state.PlayerStatus}">
         <header class="control-header">
             <div class="header-group">
-                <a href="" class="header-back"><i class="icon icon-back"></i></a>
+                <a class="header-back" @click="this.$store.commit('changePlayerStatus')"><i class="icon icon-back"></i></a>
                 <div class="song-info">
                     <div class="song-name">七里香</div>
                     <div class="author-name">周悦</div>
@@ -13,7 +13,15 @@
         <div class="control-main">
             <div class="main-lyric"></div>
             <div class="main-cover">
-
+               <audio src="http://omwpjgs5a.bkt.clouddn.com/music/mianju.mp3" autoplay="autoplay" ref="musicPlayer">
+                    您的浏览器不支持 audio 标签。
+                </audio>
+                <!--<button @click="">上一曲</button><br>-->
+                <button @click="play">播放</button><br>
+                <!--<button ref="next">下一曲</button><br>-->
+                <button @click="stop">暂停</button><br>
+                <button @click="reduceVolume">减小音量</button><br>
+                <button @click="addVolume">放大音量</button><br>
                 <div class="cover-control"></div>
             </div>
         </div>
@@ -28,23 +36,68 @@
 <script>
 export default {
     name:'controller',
+    mounted(){
+        this.$refs['musicPlayer'].volume = 0.5
+    },
     data(){
         return{}
     },
     methods:{
+        play(){
+            this.$refs['musicPlayer'].play()
+        },
+        stop(){
+            this.$refs['musicPlayer'].pause()
+        },
+        playPrev(){
 
+        },
+        playNext(){
+
+        },
+        reduceVolume(){
+            let volume = this.$refs['musicPlayer'].volume
+            if(volume.toFixed(1) == 0){
+                return;
+            }else{
+                this.$refs['musicPlayer'].volume -= 0.1
+            }
+        },
+        addVolume(){
+            let volume = this.$refs['musicPlayer'].volume
+            if(volume.toFixed(1) == 1){
+                return;
+            }
+            this.$refs['musicPlayer'].volume += 0.1
+        }
     }
 }
 </script>
 
 <style lang="scss">
 @import '../../style/util';
+button{
+    padding:10px 20px;
+    cursor:pointer;
+}
+.music-control.show{
+    transform: translate3d(0,0,0);
+}
 .music-control{
-    width:100%;
-    height:100%;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    // width:100vh;
+    height:100vh;
     overflow:hidden;
+    z-index:100;
+    background:#000;
+    transition: all .5s ease-in-out;
+    transform: translate3d(100%,0,0);
     .controller-bg{
-        position:fixed;
+        position:absolute;
         top:-15%;
         left:-15%;
         width:150%;
@@ -61,6 +114,7 @@ export default {
     // 　　-moz-filter: blur(100px);
     // 　　-ms-filter: blur(100px);
         filter: blur(80px);
+        z-index:1;
     }
 }
 .control-header{
@@ -113,5 +167,12 @@ export default {
     .author-name{
         font-size:rem(20);
     }
+}
+.control-main{
+    position:relative;
+    box-sizing:border-box;
+    height:100vh;
+    padding-top: rem(120);   
+    z-index:2;
 }
 </style>

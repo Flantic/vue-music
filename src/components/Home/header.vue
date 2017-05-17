@@ -7,19 +7,19 @@
             <input type="text" id="header_search"
                 v-model="search_text" 
                 @focus='search_state=!search_state' 
-                @input='cleartext()'>
+                @input='clearText()'>
         </div>
-        <a class="header-music"><i class="icon icon-music"></i></a>
-        <div class="cancel" @click='header_swith'>取消</div>
+        <a class="header-music" @click="test"><i class="icon icon-music"></i></a>
+        <div class="cancel" @click='headerSwith'>取消</div>
     </div>
     <nav class="header-nav">
         <ul class="nav-menu">
-            <li @click="NavSwitch($event)"><span>个性推荐</span></li>	
-            <li @click="NavSwitch($event)"><span>歌单</span></li>
-            <li @click="NavSwitch($event)"><span>主播电台</span></li>
-            <li @click="NavSwitch($event)"><span>排行榜</span></li>
+            <li @click="navSwitch($event)" :class="{'active':this.$store.state.HomePageNumber == 0}"><span>个性推荐</span></li>	
+            <li @click="navSwitch($event)" :class="{'active':this.$store.state.HomePageNumber == 1}"><span>歌单</span></li>
+            <li @click="navSwitch($event)" :class="{'active':this.$store.state.HomePageNumber == 2}"><span>主播电台</span></li>
+            <li @click="navSwitch($event)" :class="{'active':this.$store.state.HomePageNumber == 3}"><span>排行榜</span></li>
         </ul>
-        <span class="nav-slider" :style="nav_style[active_nav]"></span>
+        <span class="nav-slider" :style="nav_style[this.$store.state.HomePageNumber]"></span>
     </nav>
 </header>
 </template>
@@ -31,6 +31,7 @@ import store from 'src/store'
 export default {
   name: 'header',
   mounted(){
+      console.log(this.$store)
 	  this.initNavPosition()
   },
   components: {
@@ -45,6 +46,9 @@ export default {
 	}
   },
   methods:{
+      test(){
+        this.$store.commit('changePlayerStatus')
+      },
       initNavPosition(){
           let nav_menu = document.querySelectorAll('.nav-menu>li span');
           let style=[];
@@ -57,20 +61,20 @@ export default {
             })
 	      })
       },
-	  NavSwitch(e){
+	  navSwitch(e){
 		let target = $(e.currentTarget)
+        console.log(target)
         store.commit('changeHomePage',{num:target.index()})
-		target.addClass('active').siblings().removeClass('active')
 		this.active_nav = target.index();
 	  },
-	  cleartext(){
+	  clearText(){
 		if(this.search_text == ''){
 			this.label_text = '搜索音乐、歌词、电台';
 			return;
 		}
 		this.label_text = '';
 	  },
-	  header_swith(){
+	  headerSwith(){
 		  this.search_state=!this.search_state;
 		  this.search_text = "";
 		  this.label_text = '搜索音乐、歌词、电台';
@@ -220,7 +224,7 @@ export default {
         }
     }
     .active {
-        a {
+        span {
             color: $main-tone;
         }
     }

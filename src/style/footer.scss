@@ -4,7 +4,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: rem(97);
+    height: rem(100);
     border-top: rem(1) solid #231e22;
     overflow: hidden;
     z-index: 99;
@@ -30,16 +30,16 @@
     justify-content: space-around;
     .item {
         display: block;
-        padding: rem(1) 0 rem(5);
+        padding: rem(5) 0 rem(5);
         width: 25%;
         height: 100%;
         color: #fff;
         .icon {
-            font-size: rem(48);
+            font-size: rem(45);
             color: #a7a7a7;
         }
         .title {
-            font-size: rem(20);
+            font-size: rem(24);
             color: #7c7a7b;
         }
     }

@@ -1,342 +1,372 @@
 <template>
-<div class="home-recommend">
-    <div class="slider">
-        <Slider></Slider>
-    </div>
-    <div class="Recommend">
-        <div class="item">
-            <a href=""><i class="img img-FM"></i></a>
-            <p class="title">私人FM</p>
+<div class="home-recommend" ref="myBScroll">
+    <div class="BScroll-wrapper" >
+        <div class="slider">
+            <Slider></Slider>
         </div>
-        <div class="item ">
-            <a href=""><i class="img img-Recommend"></i></a>
-            <p class="title">每日歌曲推荐</p>
-        </div>
-        <div class="item">
-            <a href=""><i class="img img-Hot-top"></i></a>
-            <p class="title">云音乐热歌榜</p>
-        </div>
-    </div>
-    <div class="list-content">
-        <section class="item-box">
-            <div class="title">
-                <i class="img img-calendar"></i>
-                推荐歌单
-                <a href="" class="more">更多></a>
+        <div class="Recommend">
+            <div class="item">
+                <a href=""><i class="img img-FM"></i></a>
+                <p class="title">私人FM</p>
             </div>
-            <ul class="list-warp song-list">
-                <li>
-                    <a href="">
-                        <div class="item-img">
-                            <router-link to="/Controller">
-                                <img src="../../assets/img/item1.jpg" alt="">
+            <div class="item ">
+                <a href=""><i class="img img-Recommend"></i></a>
+                <p class="title">每日歌曲推荐</p>
+            </div>
+            <div class="item">
+                <a href=""><i class="img img-Hot-top"></i></a>
+                <p class="title">云音乐热歌榜</p>
+            </div>
+        </div>
+        <div class="list-content">
+            <section class="item-box">
+                <div class="title">
+                    <i class="img img-calendar"></i>
+                    推荐歌单
+                    <a href="" class="more">更多></a>
+                </div>
+                <ul class="list-warp song-list">
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <router-link to="/Controller">
+                                    <img src="../../assets/img/item1.jpg" alt="">
+                                    <span class="label"><i class="icon icon-headset"></i>20万</span>
+                                </router-link>
+                            </div>
+                            <div class="item-title">
+                                【华语】 愿我们 不负这 美好时光
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item2.jpg" alt="">
                                 <span class="label"><i class="icon icon-headset"></i>20万</span>
-                            </router-link>
-                        </div>
-                        <div class="item-title">
-                            【华语】 愿我们 不负这 美好时光
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="item-img">
-                            <img src="../../assets/img/item2.jpg" alt="">
-                            <span class="label"><i class="icon icon-headset"></i>20万</span>
-                        </div>
-                        <div class="item-title">
-                            【华语】 愿我们 不负这 美好时光
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="item-img">
-                            <img src="../../assets/img/item3.jpg" alt="">
-                            <span class="label"><i class="icon icon-headset"></i>20万</span>
-                        </div>
-                        <div class="item-title">
-                            【华语】 愿我们 不负这 美好时光
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="item-img">
-                            <img src="../../assets/img/item4.jpg" alt="">
-                            <span class="label"><i class="icon icon-headset"></i>20万</span>
-                        </div>
-                        <div class="item-title">
-                            【华语】 愿我们 不负这 美好时光
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="item-img">
-                            <img src="../../assets/img/item5.jpg" alt="">
-                            <span class="label"><i class="icon icon-headset"></i>20万</span>
-                        </div>
-                        <div class="item-title">
-                            【华语】 愿我们 不负这 美好时光
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="item-img">
-                            <img src="../../assets/img/item6.jpg" alt="">
-                            <span class="label"><i class="icon icon-headset"></i>20万</span>
-                        </div>
-                        <div class="item-title">
-                            【华语】 愿我们 不负这 美好时光
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <section class="item-box">
-            <div class="title">
-                <i class="img img-album"></i>
-                独家放送
-                <a href="" class="more">更多></a>
-            </div>
-            <ul class="list-warp sole-push">
-                <li>
-                    <div class="item-img">
-                        <img src="../../assets/img/item1.jpg" alt="">
-                    </div>
-                    <div class="item-title">
-                        《耳畔中国》 踢馆选手选拔大赛开赛啦!
-                    </div>
-                </li>
-                <li>
-                    <div class="item-img">
-                        <img src="../../assets/img/item2.jpg" alt="">
-                    </div>
-                    <div class="item-title">
-                        音乐专栏 迷上了 《爱乐之城》 ? 这里还有更好的音乐...
-                    </div>
-                </li>
-                <li>
-                    <div class="item-img">
-                        <img src="../../assets/img/item3.jpg" alt="">
-                    </div>
-                    <div class="item-title">
-                        音乐专栏 春天快来了, 带着爸妈踏个青吧!
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section class="item-box">
-            <div class="title">
-                <i class="img img-cd"></i>
-                最新音乐
-                <a href="" class="more">更多></a>
-            </div>
-            <ul class="list-warp song-list">
-                <li>
-                    <a href="">
+                            </div>
+                            <div class="item-title">
+                                【华语】 愿我们 不负这 美好时光
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item3.jpg" alt="">
+                                <span class="label"><i class="icon icon-headset"></i>20万</span>
+                            </div>
+                            <div class="item-title">
+                                【华语】 愿我们 不负这 美好时光
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item4.jpg" alt="">
+                                <span class="label"><i class="icon icon-headset"></i>20万</span>
+                            </div>
+                            <div class="item-title">
+                                【华语】 愿我们 不负这 美好时光
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item5.jpg" alt="">
+                                <span class="label"><i class="icon icon-headset"></i>20万</span>
+                            </div>
+                            <div class="item-title">
+                                【华语】 愿我们 不负这 美好时光
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item6.jpg" alt="">
+                                <span class="label"><i class="icon icon-headset"></i>20万</span>
+                            </div>
+                            <div class="item-title">
+                                【华语】 愿我们 不负这 美好时光
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="item-box">
+                <div class="title">
+                    <i class="img img-album"></i>
+                    独家放送
+                    <a href="" class="more">更多></a>
+                </div>
+                <ul class="list-warp sole-push">
+                    <li>
                         <div class="item-img">
                             <img src="../../assets/img/item1.jpg" alt="">
                         </div>
                         <div class="item-title">
-                            <p>因为遇见你 电视剧热播</p>
-                            <p>群星</p>
+                            《耳畔中国》 踢馆选手选拔大赛开赛啦!
                         </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
+                    </li>
+                    <li>
                         <div class="item-img">
                             <img src="../../assets/img/item2.jpg" alt="">
                         </div>
                         <div class="item-title">
-                            <p>因为遇见你 电视剧热播</p>
-                            <p>群星</p>
+                            音乐专栏 迷上了 《爱乐之城》 ? 这里还有更好的音乐...
                         </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
+                    </li>
+                    <li>
                         <div class="item-img">
                             <img src="../../assets/img/item3.jpg" alt="">
                         </div>
                         <div class="item-title">
-                            <p>因为遇见你 电视剧热播</p>
-                            <p>群星</p>
+                            音乐专栏 春天快来了, 带着爸妈踏个青吧!
                         </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="item-img">
-                            <img src="../../assets/img/item4.jpg" alt="">
-                        </div>
-                        <div class="item-title">
-                            <p>因为遇见你 电视剧热播</p>
-                            <p>群星</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="item-img">
-                            <img src="../../assets/img/item5.jpg" alt="">
-                        </div>
-                        <div class="item-title">
-                            <p>因为遇见你 电视剧热播</p>
-                            <p>群星</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="item-img">
-                            <img src="../../assets/img/item1.jpg" alt="">
-                        </div>
-                        <div class="item-title">
-                            <p>因为遇见你 电视剧热播</p>
-                            <p>群星</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <section class="item-box">
-            <div class="title">
-                <i class="img img-album"></i>
-                推荐MV
-                <a href="" class="more">更多></a>
-            </div>
-            <ul class="list-warp sole-push mv">
-                <li>
-                    <div class="item-img">
-                        <img src="../../assets/img/item1.jpg" alt="">
-                        <span class="label"><i class="icon icon-movie"></i>33944</span>
-                    </div>
-                    <div class="item-title">
-                        《耳畔中国》 踢馆选手选拔大赛开赛啦!
-                    </div>
-                </li>
-                <li>
-                    <div class="item-img">
-                        <img src="../../assets/img/item2.jpg" alt="">
-                        <span class="label"><i class="icon icon-movie"></i>24548</span>
-                    </div>
-                    <div class="item-title">
-                        音乐专栏 迷上了 《爱乐之城》 ? 这里还有更好的音乐...
-                    </div>
-                </li>
-                <li>
-                    <div class="item-img">
-                        <img src="../../assets/img/item3.jpg" alt="">
-                        <span class="label"><i class="icon icon-movie"></i>18万</span>
-                    </div>
-                    <div class="item-title">
-                        音乐专栏 春天快来了, 带着爸妈踏个青吧!
-                    </div>
-                </li>
-                <li>
-                    <div class="item-img">
-                        <img src="../../assets/img/item3.jpg" alt="">
-                        <span class="label"><i class="icon icon-movie"></i>12万</span>
-                    </div>
-                    <div class="item-title">
-                        音乐专栏 春天快来了, 带着爸妈踏个青吧!
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section class="item-box">
-            <div class="title">
-                <i class="img img-radio"></i>
-                主播电台
-                <a href="" class="more">更多></a>
-            </div>
-            <ul class="list-warp song-list">
-                <li>
-                    <a href="">
+                    </li>
+                </ul>
+            </section>
+            <section class="item-box">
+                <div class="title">
+                    <i class="img img-cd"></i>
+                    最新音乐
+                    <a href="" class="more">更多></a>
+                </div>
+                <ul class="list-warp song-list">
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item1.jpg" alt="">
+                            </div>
+                            <div class="item-title">
+                                <p>因为遇见你 电视剧热播</p>
+                                <p>群星</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item2.jpg" alt="">
+                            </div>
+                            <div class="item-title">
+                                <p>因为遇见你 电视剧热播</p>
+                                <p>群星</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item3.jpg" alt="">
+                            </div>
+                            <div class="item-title">
+                                <p>因为遇见你 电视剧热播</p>
+                                <p>群星</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item4.jpg" alt="">
+                            </div>
+                            <div class="item-title">
+                                <p>因为遇见你 电视剧热播</p>
+                                <p>群星</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item5.jpg" alt="">
+                            </div>
+                            <div class="item-title">
+                                <p>因为遇见你 电视剧热播</p>
+                                <p>群星</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item1.jpg" alt="">
+                            </div>
+                            <div class="item-title">
+                                <p>因为遇见你 电视剧热播</p>
+                                <p>群星</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="item-box">
+                <div class="title">
+                    <i class="img img-album"></i>
+                    推荐MV
+                    <a href="" class="more">更多></a>
+                </div>
+                <ul class="list-warp sole-push mv">
+                    <li>
                         <div class="item-img">
                             <img src="../../assets/img/item1.jpg" alt="">
-                            <span class="label-play text-ellipsis">我爱音乐<i class="icon icon-triangle-right"></i></span>
+                            <span class="label"><i class="icon icon-movie"></i>33944</span>
                         </div>
                         <div class="item-title">
-                            【华语】 愿我们 不负这 美好时光
+                            《耳畔中国》 踢馆选手选拔大赛开赛啦!
                         </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
+                    </li>
+                    <li>
                         <div class="item-img">
                             <img src="../../assets/img/item2.jpg" alt="">
-                            <span class="label-play">暴走大事件<i class="icon icon-triangle-right"></i></span>
+                            <span class="label"><i class="icon icon-movie"></i>24548</span>
                         </div>
                         <div class="item-title">
-                            【华语】 愿我们 不负这 美好时光
+                            音乐专栏 迷上了 《爱乐之城》 ? 这里还有更好的音乐...
                         </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
+                    </li>
+                    <li>
                         <div class="item-img">
-                            <img src="../../assets/img/item1.jpg" alt="">
-                            <span class="label-play text-ellipsis">我爱音乐<i class="icon icon-triangle-right"></i></span>
+                            <img src="../../assets/img/item3.jpg" alt="">
+                            <span class="label"><i class="icon icon-movie"></i>18万</span>
                         </div>
                         <div class="item-title">
-                            【华语】 愿我们 不负这 美好时光
+                            音乐专栏 春天快来了, 带着爸妈踏个青吧!
                         </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
+                    </li>
+                    <li>
                         <div class="item-img">
-                            <img src="../../assets/img/item2.jpg" alt="">
-                            <span class="label-play">暴走大事件<i class="icon icon-triangle-right"></i></span>
+                            <img src="../../assets/img/item3.jpg" alt="">
+                            <span class="label"><i class="icon icon-movie"></i>12万</span>
                         </div>
                         <div class="item-title">
-                            【华语】 愿我们 不负这 美好时光
+                            音乐专栏 春天快来了, 带着爸妈踏个青吧!
                         </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="item-img">
-                            <img src="../../assets/img/item1.jpg" alt="">
-                            <span class="label-play text-ellipsis">我爱音乐<i class="icon icon-triangle-right"></i></span>
-                        </div>
-                        <div class="item-title">
-                            【华语】 愿我们 不负这 美好时光
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="item-img">
-                            <img src="../../assets/img/item2.jpg" alt="">
-                            <span class="label-play">暴走大事件<i class="icon icon-triangle-right"></i></span>
-                        </div>
-                        <div class="item-title">
-                            【华语】 愿我们 不负这 美好时光
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </section>
+                    </li>
+                </ul>
+            </section>
+            <section class="item-box">
+                <div class="title">
+                    <i class="img img-radio"></i>
+                    主播电台
+                    <a href="" class="more">更多></a>
+                </div>
+                <ul class="list-warp song-list">
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item1.jpg" alt="">
+                                <span class="label-play text-ellipsis">我爱音乐<i class="icon icon-triangle-right"></i></span>
+                            </div>
+                            <div class="item-title">
+                                【华语】 愿我们 不负这 美好时光
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item2.jpg" alt="">
+                                <span class="label-play">暴走大事件<i class="icon icon-triangle-right"></i></span>
+                            </div>
+                            <div class="item-title">
+                                【华语】 愿我们 不负这 美好时光
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item1.jpg" alt="">
+                                <span class="label-play text-ellipsis">我爱音乐<i class="icon icon-triangle-right"></i></span>
+                            </div>
+                            <div class="item-title">
+                                【华语】 愿我们 不负这 美好时光
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item2.jpg" alt="">
+                                <span class="label-play">暴走大事件<i class="icon icon-triangle-right"></i></span>
+                            </div>
+                            <div class="item-title">
+                                【华语】 愿我们 不负这 美好时光
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item1.jpg" alt="">
+                                <span class="label-play text-ellipsis">我爱音乐<i class="icon icon-triangle-right"></i></span>
+                            </div>
+                            <div class="item-title">
+                                【华语】 愿我们 不负这 美好时光
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="../../assets/img/item2.jpg" alt="">
+                                <span class="label-play">暴走大事件<i class="icon icon-triangle-right"></i></span>
+                            </div>
+                            <div class="item-title">
+                                【华语】 愿我们 不负这 美好时光
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <footer class="app-cont-footer">
+            <p>现在可以根据个人爱好,自由调整首页栏目</p>
+            <button class="btn"> 调整栏目顺序</button>
+        </footer>
     </div>
-    <footer class="app-cont-footer">
-        <p>现在可以根据个人爱好,自由调整首页栏目</p>
-        <button class="btn"> 调整栏目顺序</button>
-    </footer>
 </div>
 </template>
 
 <script>
 import Slider from './slider'
+import BScroll from 'better-scroll'
 export default {
-  name: 'home-recommend',
+  mounted(){
+    this.$nextTick(()=>{
+        this.initPageScroll()
+    })
+  },
+  data(){
+      return {
+          scrollPage:{}
+      }
+  },
   components: {
 	Slider
+  },
+  methods:{
+    initPageScroll(){
+        this.scrollPage = new BScroll(this.$refs['myBScroll'],{
+            scrollY: true,
+            click: true,
+            momentum: true,
+            probeType: 3,
+            momentumLimitDistance: 8,
+            HWCompositing: true,
+            useTransition: true,
+            useTransform: true
+        })
+        this.scrollPage.on('scrollEnd',()=>{
+            console.log('scrollEnd...')
+        })
+        console.log(this.scrollPage)
+    }
   }
 }
 </script>
@@ -344,6 +374,8 @@ export default {
 <style lang="scss" >
 @import '../../style/util';
 .home-recommend {
+    height:100%;
+    overflow:scroll;
     padding: rem(166) 0 rem(97);
     //轮播图
     .slider {
@@ -357,6 +389,7 @@ export default {
         border-bottom: rem(1) solid #e1e2e3;
     }
 }
+.BScroll-wrapper{ padding-bottom:1.5rem;}
 .Recommend {
     padding: rem(17) 0 rem(17);
     .item {
@@ -485,7 +518,7 @@ export default {
         text-shadow: 0 rem(3) rem(2) #1b1715;
         .icon {
             font-size: rem(24);
-            vertical-align: -4px;
+            // vertical-align: -4px;
         }
     }
     .label-play {
@@ -611,7 +644,7 @@ export default {
 }
 //-------------------------------app-cont-footer style-----------------------------------
 .app-cont-footer {
-    padding: rem(30) 0 rem(80);
+    padding: rem(30) 0 rem(380);
     text-align: center;
     font-size: rem(23);
     border-top: rem(1) solid #e1e2e3;

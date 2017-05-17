@@ -2,15 +2,17 @@
 import Main from 'components/main.vue'
 //-----------Home page and components----------------
 import Home from 'components/Home/index.vue'
-import HomeRecommend from 'components/Home/home_recommend.vue'
-import HomeSongList from 'components/Home/home_songlist.vue'
-import HomeRadio from 'components/Home/home_radio.vue'
-import HomeRanking from 'components/Home/home_ranking.vue'
+import Controller from 'components/Controller/index.vue'
+// import HomeRecommend from 'components/Home/home_recommend.vue'
+// import HomeSongList from 'components/Home/home_songlist.vue'
+// import HomeRadio from 'components/Home/home_radio.vue'
+// import HomeRanking from 'components/Home/home_ranking.vue'
 
 const HomeRouter = {
     path: '/',
     components: {
-        main: Main
+        main: Main,
+        control:Controller
     },
     children: [{
         path: '/',
@@ -18,23 +20,12 @@ const HomeRouter = {
         children:[{
             path:'/',
             components:{
-                home_recommend:HomeRecommend,
-                home_songlist:HomeSongList,
-                home_radio:HomeRadio,
-                home_ranking:HomeRanking
+                home_recommend:reslove=> require(['components/Home/home_recommend.vue'],reslove),
+                home_songlist:reslove=> require(['components/Home/home_songlist.vue'],reslove),
+                home_radio:reslove=> require(['components/Home/home_radio.vue'],reslove),
+                home_ranking:reslove=> require(['components/Home/home_ranking.vue'],reslove),
             },
-        }
-        // ,{
-        //     path:'/home_songlist',
-        //     components: {home_songlist:HomeSongList},
-        // },{
-        //     path:'/home_radio',
-        //     components: {home_radio:HomeRadio},
-        // },{
-        //     path:'/home_ranking',
-        //     components: {home_ranking:HomeRanking},  
-        // }
-        ]
+        }]
     },]
 }
 export default HomeRouter

@@ -1,7 +1,7 @@
 <template>
 <footer class="app-footer">
     <div class="footer-bg"></div>
-    <nav class="footer-nav" ref="footerNav" @click="initNav">
+    <nav class="footer-nav">
         <router-link v-for="(item,index) in footerdata" :to="item.link" :key="index" class="item" :exact="index==0">
             <i :class="['icon',item.icon]"></i>
             <p class="title">{{item.text}}</p>
@@ -35,13 +35,6 @@ export default {
             }
         ]
      }
-  },
-  methods:{
-    initNav(){
-        if(window.location.hash=="#/"){
-            document.querySelector('.nav-slider').style.left== '0px '
-        }
-    }
   }
 }
 </script>
